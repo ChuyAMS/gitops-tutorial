@@ -2,7 +2,7 @@
 apiVersion: apps/v1 # for versions before 1.6.0 use extensions/v1beta1
 kind: Deployment
 metadata:
-  name: podinfo  
+  name: podinfo
   annotations:
     flux.weave.works/tag.podinfo: glob:*
     flux.weave.works/automated: 'true'
@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: quay.io/stefanprodan/podinfo:3.0.0
+        image: quay.io/stefanprodan/podinfo:3.1.5
         ports:
         - containerPort: 3000
